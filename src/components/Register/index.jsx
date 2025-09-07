@@ -63,7 +63,7 @@ const RegisterForm = () => {
               ...form,
               
             }
-            const apiUrl = "http://localhost:5100/api/register"
+            const apiUrl = "https://klickksassserver.onrender.com/api/register"
             const options = {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
