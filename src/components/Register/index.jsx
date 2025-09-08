@@ -72,7 +72,7 @@ const RegisterForm = () => {
             const response = await fetch(apiUrl, options)
             const data = await response.json()
             if (response.ok === true) {
-                setMessage(data.message)
+                setMessage(data.message || "Registration successful")
               setShowSuccess(true);
              
                 setTimeout(() => {
