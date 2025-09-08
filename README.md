@@ -1,12 +1,79 @@
-# React + Vite
+# 👤 User Register and Login 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates a full-stack implementation of user registration , login  with the help of backend (Node js, Expres js). It also supports fetching and displaying users from an sqlite.
 
-Currently, two official plugins are available:
+## 🌍 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Published Frontend URL:
+🔗 **Frontend (Netlify):** https://klickass.netlify.app/
 
-## Expanding the ESLint configuration
+#### Server:
+🔗 **Backend (Render):** https://klickksassserver.onrender.com
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Tech Stack
+
+- ⚛️ React (Frontend)
+- 🧠 Express.js + Node.js (Backend)
+- SQLite Database
+
+---
+
+## 🚀 Features
+
+- ✅ Register users via form
+- 📥 Login  Registered Users 
+- ✅ Success toast on update
+
+---
+
+## 📁 Project Structure
+```
+project/
+│
+├── crudass/
+│ ├── public/
+│ └── src/
+│ ├── components/
+│ │ ├── RegisterForm.jsx # Form to add users
+│ │ └── HomePage.jsx 
+│ │ └── LoginForm.jsx 
+│ │ └── ProtectedRoute.jsx 
+│ ├── App.jsx # Main app component
+│ └── index.css
+│
+├── server/
+│ ├── index.js
+└── README.md
+```
+
+## 🔧 Setup Instructions
+
+### 1. Clone the repository
+
+    git clone https://github.com/your-username/your-repo-name.git
+    cd covAss
+
+###  2. Backend Setup
+
+   
+    You must update it to your Render backend URL. You must update as per your server
+     In your Express backend (index.js):
+       // Example
+    const cors = require('cors');
+    app.use(cors({
+      origin: 'https://your-frontend.netlify.app',
+    }));
+    
+    cd backend
+    npm install
+    node index.js
+    
+###  3. Frontend Setup
+
+     Your React frontend is likely still calling the published URL. You must update as per your server in all api calls
+      // Example
+    const API_URL = "https://localhost:5100/api/login";
+    
+    cd klickkass
+    npm install
+    npm run dev
